@@ -1,0 +1,75 @@
+.big__lef-box {
+    max-width: 455px;
+
+}
+
+.positon__section {
+    background-image: url('../images/radius-img.png');
+    background-repeat: no-repeat;
+    background-position: left calc(50% + 52rem) center;
+    position: relative;
+}
+
+.strelka-radius::before {
+    content: url(../images/icons/strelka-radius.svg);
+    position: absolute;
+    top: 300px;
+    left: calc(50% - 20px);
+}
+
+.strelka-radius-2::before {
+    content: url(../images/icons/strelka-radius.svg);
+    position: absolute;
+    top: 0px;
+    right: calc(50% + 22rem);
+    transform: rotateY(180deg);
+}
+
+.strelka-radius-3::before {
+    content: url(../images/icons/strelka-radius.svg);
+    position: absolute;
+    top: 300px;
+    left: calc(50% - 20px);
+}
+
+
+.positon__section:nth-child(2) {
+    background-position: left calc(50% + -52rem) center;
+}
+
+.positon__section:not(:last-child) {
+    margin-bottom: 160px;
+}
+
+.position__section-container {
+    @include flexbox(flex, space-between, center);
+
+    @include for-tablet() {
+        flex-direction: column;
+        row-gap: 56px;
+    }
+}
+
+.big__left-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: $dark-navy-color;
+    letter-spacing: -2.14286px;
+}
+
+.big__left-text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: $dim-grey;
+    margin: 24px 0px 40px 0px;
+}
+
+.big__left-btn {
+    padding: 14px 42px;
+}
+
+.big__right-box {
+    border-radius: 50%;
+}

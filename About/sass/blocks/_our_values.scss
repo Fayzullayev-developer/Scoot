@@ -1,0 +1,78 @@
+.our__values {
+    margin-top: 200px;
+}
+
+.our__values-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -2.14286px;
+    color: $dark-navy-color;
+    margin-bottom: 103px;
+
+    @include for-mobile() {
+        letter-spacing: -1.42857px;
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 64px;
+    }
+}
+
+.about__cards {
+    @include flexbox(flex, space-between, center);
+
+    @include for-tablet() {
+        flex-direction: column;
+        row-gap: 55px;
+    }
+}
+
+.about__card {
+    max-width: 350px;
+    text-align: center;
+
+    @include for-tablet() {
+        max-width: 457px;
+    }
+
+    @include for-mobile() {
+        max-width: 311px;
+    }
+}
+
+.about__card-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.about__card-info {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -1.07143px;
+    color: $dark-navy-color;
+    padding: 34px 35px 34px 34px;
+    background-color: $yellow-color;
+    border-radius: 500%;
+    position: relative;
+    top: 0;
+    left: 0px;
+}
+
+.about__card-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: $dark-navy-color;
+    margin: 60px 0px 27px 0px;
+}
+
+.about__card-text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: $dark-navy-color;
+}

@@ -1,0 +1,59 @@
+.apply {
+    margin-top: 200px;
+    @include flexbox(flex, flex-start, center);
+    flex-direction: column;
+    row-gap: 24px;
+
+    @include for-tablet() {
+        row-gap: 16px;
+    }
+}
+
+.apply__box {
+    background: #F2F5F9;
+    @include flexbox(flex, space-between, center);
+    width: 100%;
+    padding: 32px 64px 35px 40px;
+
+    @include for-tablet() {
+        padding: 34px 48px 33px 48px;
+    }
+
+    @include for-mobile() {
+        padding: 36px 32px 32px 32px;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 16px;
+    }
+}
+
+.apply__min-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: $dark-navy-color;
+    margin-bottom: 8px;
+
+    @include for-mobile() {
+        margin-bottom: 4px;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.803571px;
+    }
+}
+
+.apply__min-text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: $dark-navy-color;
+}
+
+.apply__box-btn {
+    padding: 12px 65px;
+
+    @include for-mobile() {
+        width: 247px;
+    }
+}

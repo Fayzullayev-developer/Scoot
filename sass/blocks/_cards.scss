@@ -1,0 +1,100 @@
+.cards {
+    @include flexbox(flex, flex-start, center);
+    column-gap: 30px;
+    margin: 160px 0px 200px 0px;
+    position: relative;
+
+    @include for-tablet() {
+        flex-direction: column;
+        row-gap: 40px;
+        margin: 122px 0px 145px 0px;
+    }
+
+    @include for-mobile() {
+        margin: 120px 0px;
+        row-gap: 48px;
+    }
+}
+
+.cards__box {
+    @include for-tablet() {
+        @include flexbox(flex, flex-start, center);
+        column-gap: 79px;
+    }
+
+    @include for-mobile() {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.cards__img {
+    background-color: $yellow-color;
+    padding: 24px 28.61px 24px 29px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cards__scooter--img {
+    padding: 32px 26px 32px 27px;
+
+}
+
+.cards__enjoy--img {
+    padding: 28px;
+    display: inline-block;
+}
+
+.cards__min-title {
+    max-width: 350px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: $dark-navy-color;
+    margin: 40px 0px 27px 0;
+
+    @include for-mobile() {
+        font-size: 20px;
+        line-height: 28px;
+        width: 311px;
+        margin: 24px auto;
+    }
+}
+
+.cards__min-text {
+    max-width: 350px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: $dim-grey;
+
+    @include for-tablet() {
+        max-width: 398px;
+    }
+
+    @include for-mobile() {
+        max-width: 311px;
+    }
+}
+
+.cards__last--box::after {
+    content: '';
+    width: 974px;
+    z-index: -1;
+    display: block;
+    position: absolute;
+    translate: -925px -260px;
+    height: 16px;
+    background-color: #E5ECF4;
+
+    @include for-tablet() {
+        width: 16px;
+        height: 660px;
+        translate: 35px -300px;
+    }
+
+    @include for-mobile() {
+        display: none;
+    }
+}

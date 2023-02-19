@@ -1,0 +1,94 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 111;
+    background-color: $white-color;
+}
+
+.navbar {
+    @include flexbox(flex, flex-start, center);
+    column-gap: 58px;
+    padding: 22px 0;
+
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__add {
+        display: none;
+
+        @include for-mobile() {
+            display: block;
+
+        }
+    }
+
+    @include for-mobile() {}
+}
+
+.navbar__box {
+    @include flexbox(flex, space-between, center);
+    width: 100%;
+
+    @include for-mobile() {
+        position: fixed;
+        left: -100%;
+        top: 64px;
+        flex-direction: column;
+        height: 100vh;
+        background-color: $main-color;
+        width: 256px;
+        padding-top: 64px;
+        padding-bottom: 94px;
+    }
+}
+
+.navbar__meny {
+    @include flexbox(flex, space-between, center);
+    column-gap: 32px;
+
+    &-link {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px;
+        color: $dim-grey;
+        transition: 0.3s;
+
+        &:hover {
+            color: $yellow-color;
+        }
+    }
+
+    @include for-mobile() {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        row-gap: 24px;
+    }
+}
+
+.navbar__logo {
+    @include for-mobile() {
+        width: 75px;
+        height: 20px;
+    }
+}
+
+.navbar__checkbox:checked~.navbar__box {
+    left: 0%;
+    box-shadow: 336px 90px 0px 88px rgb(0 0 0 / 76%);
+}
+
+.navbar__checkbox:checked~.navbar__add {
+    display: none;
+}
+
+.navbar__checkbox:checked~.meny__x {
+    display: block;
+}
+
+.meny__x {
+    display: none;
+}

@@ -1,0 +1,17 @@
+@mixin flexbox($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin for-tablet {
+    @media screen and (max-width:1000px) {
+        @content;
+    }
+}
+
+@mixin for-mobile {
+    @media screen and (max-width:680px) {
+        @content;
+    }
+}

@@ -1,0 +1,120 @@
+.faqs {
+    margin: 120px 0px 160px 0px;
+
+    @include for-tablet() {
+        margin-bottom: 120px;
+    }
+
+    @include for-mobile() {
+        margin-top: 145px;
+    }
+}
+
+.faqs__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -2.14286px;
+    color: $dark-navy-color;
+    margin-bottom: 64px;
+
+    @include for-mobile() {
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: -1.42857px;
+        margin-bottom: 48px;
+    }
+}
+.faqs__big-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+    @include for-mobile(){
+        row-gap: 48px;
+    }
+}
+.faqs__container {
+    @include flexbox(flex, space-between, flex-start);
+
+    @include for-tablet() {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 32px;
+    }
+}
+
+.faqs__container-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.78571px;
+    color: $dark-navy-color;
+
+    @include for-mobile() {
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -1.07143px;
+    }
+}
+
+.faqs__container-box {
+    max-width: 730px;
+    width: 100%;
+    @include flexbox(flex, flex-start, flex);
+    flex-direction: column;
+    row-gap: 16px;
+
+    @include for-tablet() {
+        row-gap: 24px;
+    }
+
+    @include for-mobile() {
+        row-gap: 16px;
+    }
+}
+
+.faqs__app-box {
+    @include flexbox(flex, space-between, center);
+    background: #F2F5F9;
+    padding: 32px 40px;
+
+    @include for-mobile() {
+        padding: 32px;
+    }
+}
+
+.app__box-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: $dark-navy-color;
+
+    @include for-mobile() {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.803571px;
+    }
+}
+
+.app__min-box {
+    @include flexbox(flex, space-between, center);
+    width: 100%;
+}
+
+.faqs__app-first {
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.app__box-text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: $dark-navy-color;
+}
+
+.faqs__app-img {
+    cursor: pointer;
+}

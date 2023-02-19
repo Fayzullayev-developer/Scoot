@@ -1,0 +1,56 @@
+@import './fonts';
+@import './variables';
+@import './mixin';
+
+html,
+body {
+    height: 100%;
+}
+
+main {
+    min-height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: $space-mono;
+    overflow-x: hidden;
+}
+
+p {
+    font-family: $lexend-deca;
+}
+
+.container {
+    max-width: 1154px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+button {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    color: $white-color;
+    background: #FCB72B;
+    padding: 14px 39px;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+    border: 3px solid $yellow-color;
+    transition: color 0.35s, background-color 0.7s;
+
+    &:hover {
+        color: $yellow-color;
+        background-color: transparent;
+    }
+}
+
+@import './blocks/blocks';
